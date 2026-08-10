@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f2ead8;
+  --color-paper-dim: #e8dec4;
+  --color-paper-line: #cabf9e;
+  --color-ink: #1d2b39;
+  --color-ink-mute: #5c6b78;
+  --color-amber: #e2963b;
+  --color-amber-soft: #f0c283;
+  --color-signal: #c0463a;
+  --color-green: #4c7a63;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .paper-noise {
+    background-image: radial-gradient(circle at 1px 1px, rgba(29, 43, 57, 0.06) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  .waybill-border {
+    border: 1.5px solid var(--color-ink);
+  }
+
+  .dash-line {
+    border-top: 2px dashed var(--color-paper-line);
+  }
+}
+
+.perforated {
+  position: relative;
+}
+.perforated::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--color-paper);
+  border-radius: 50%;
+  border: 1.5px solid var(--color-ink);
+  transform: translateY(-50%);
+}
