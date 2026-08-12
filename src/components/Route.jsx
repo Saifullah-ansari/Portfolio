@@ -50,14 +50,14 @@ function RouteStop({ stop, index }) {
               <p className="font-[var(--font-display)] text-sm font-semibold text-ink">{h.title}</p>
               <p className="mt-1 font-mono text-[11px] text-ink-mute">{h.stack}</p>
               <p className="mt-2 text-xs text-ink/70 leading-relaxed">{h.detail}</p>
-              <div className="mt-3 flex flex-wrap gap-3 dash-line pt-3">
+              {/* <div className="mt-3 flex flex-wrap gap-3 dash-line pt-3">
                 {h.metrics.map((m) => (
                   <div key={m.label}>
                     <p className="font-mono text-lg font-semibold text-signal leading-none">{m.value}</p>
                     <p className="font-mono text-[9px] uppercase tracking-wider text-ink-mute mt-1">{m.label}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

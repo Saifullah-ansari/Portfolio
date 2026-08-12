@@ -4,8 +4,8 @@ import { profile } from "../data";
 const fields = [
   { label: "Role", value: profile.role },
   { label: "Based in", value: profile.location },
-  { label: "Experience", value: "3+ years, production apps" },
-  { label: "Core stack", value: "React · Node.js · Express · MySQL · Java · Spring Boot" },
+  { label: "Experience", value: profile.experience },
+  { label: "Core stack", value: profile.coreTech },
 ];
 
 export default function Manifest() {
@@ -24,7 +24,7 @@ export default function Manifest() {
             About me
           </h2>
           <p className="mt-4 text-ink/70 leading-relaxed">
-            The contents, declared plainly — no filler, no jargon that doesn't ship code.
+            Here's a straightforward look at what I do.
           </p>
         </motion.div>
 
@@ -36,14 +36,14 @@ export default function Manifest() {
           className="md:col-span-8 waybill-border p-6 md:p-10 bg-paper-dim/60"
         >
           <p className="text-lg md:text-xl leading-relaxed text-ink">
-            {profile.summary}
+            {profile.summary2}
           </p>
 
           <div className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-5 dash-line pt-6">
             {fields.map((f) => (
-              <div key={f.label} className="flex justify-between gap-4 font-mono text-sm">
-                <span className="text-ink-mute uppercase tracking-wider">{f.label}</span>
-                <span className="text-ink text-right">{f.value}</span>
+              <div key={f.label} className="font-mono text-sm">
+                <span className="block text-ink-mute uppercase tracking-wider text-xs mb-1">{f.label}</span>
+                <span className="block text-ink">{f.value}</span>
               </div>
             ))}
           </div>

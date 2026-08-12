@@ -1,12 +1,17 @@
+import { summary } from "framer-motion/client";
+
 export const profile = {
   name: "Mohammad Saifullah Ansari",
   role: "Full-Stack Developer",
   location: "Delhi, India",
-  email: "saifa5098@gmail.com",
+  coreTech: "React · Java · Spring Boot · Node.js · Express.js · MySQL",
+  email: "saifa5098@gmail.com", 
+   experience: "3+ Years",
   phone: "+91 70919 05601",
   tracking: "MSA-DEV-2022",
-  summary:
-    "I'm a full-stack developer with 3+ year of experience building web applications using React, Node.js,Spring Boot, Express, and MySQL. I've worked on real business systems — tracking vehicles, managing logistics, and automating HR processes.",
+summary:
+    "Full-Stack Developer with 3+ years of professional experience designing and developing scalable web applications using React, Java, Spring Boot, Node.js, Express.js, and MySQL. Experienced in building real-world business applications including logistics management systems, vehicle tracking platforms, HR and documentation systems, and machine maintenance dashboards. Strong understanding of REST APIs, database management, responsive UI development, and full-stack application architecture.",
+    summary2: "I am a results-driven Full-Stack Developer who enjoys turning business requirements into reliable, scalable, and user-friendly software solutions. My experience covers both frontend and backend development, including React-based interfaces, Java/Spring Boot APIs, Node.js applications, database management, authentication, dashboards, and application integration. I have worked on production systems supporting logistics operations, employee management, documentation, vehicle tracking, and equipment maintenance."
 };
 
 export const skillCrates = [
@@ -83,29 +88,29 @@ export const jobHighlights = [
     stack: "React · Redux · Tailwind CSS",
     detail:
       "Built a scalable frontend to manage solar-panel orders and dispatch tracking, with SIM-based and Fastag vehicle tracking wired in.",
-    metrics: [
-      { value: "-30%", label: "delivery delays" },
-      { value: "-20%", label: "logistics cost" },
-    ],
+    // metrics: [
+    //   { value: "-30%", label: "delivery delays" },
+    //   { value: "-20%", label: "logistics cost" },
+    // ],
   },
   {
     title: "Documentation & HR System",
     stack: "Spring Boot · MySQL",
     detail:
       "Engineered the backend that automated employee onboarding and audit processes end to end.",
-    metrics: [
-      { value: "-40%", label: "paperwork errors" },
-      { value: "+50%", label: "processing speed" },
-    ],
+    // metrics: [
+    //   { value: "-40%", label: "paperwork errors" },
+    //   { value: "+50%", label: "processing speed" },
+    // ],
   },
   {
     title: "Machine Maintenance",
     stack: "React · Dashboard UI",
     detail:
       "Designed a front-end dashboard to track maintenance schedules and flag machines before they broke down.",
-    metrics: [
-      { value: "-25%", label: "machine downtime" },
-    ],
+    // metrics: [
+    //   { value: "-25%", label: "machine downtime" },
+    // ],
   },
 ];
 
